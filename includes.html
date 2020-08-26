@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+<body>
+
+<h2>Проверка 135</h2>
+
+<p>Введите любое количество знаков:</p>
+
+<input id="numb">
+
+<button type="button" onclick="myFunction()">Проверить</button>
+
+<p id="demo"></p>
+
+<script>
+    function myFunction() {
+        var x, text;
+
+        // Get the value of the input field with id="numb"
+        x = document.getElementById("numb").value;
+
+        var arrValues = x.split('');
+// Loop over each value in the array.
+        if (arrValues.includes("1") || arrValues.includes("3") || arrValues.includes("5") ) {
+            text = "Вася - лох !";
+        } else {
+            text = "Вася - красава !";
+        }
+        console.log(arrValues);
+        //alert(objValue);
+
+        document.getElementById("demo").innerHTML = text;
+    }
+</script>
+</head>
+</body>
+</html>
